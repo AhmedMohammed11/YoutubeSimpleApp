@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Ui.Activity.MainActivity"
+        android:orientation="vertical">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/home_activity_abo_zaid_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dim_8dp"
+                    android:text="@string/ahmed_abu_zaid"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/home_activity_abo_zaid_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="144dp"
+                    android:layout_marginTop="@dimen/dim_8dp"
+                    app:srcCompat="@drawable/ahmedabozied" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Button" />
+
+                <TextView
+                    android:id="@+id/home_activity_dezer_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dim_8dp"
+                    android:text="@string/omar_dezer"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/home_activity_dezer_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="144dp"
+                    android:layout_marginTop="@dimen/dim_8dp"
+                    app:srcCompat="@drawable/dezer" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Button" />
+
+                <TextView
+                    android:id="@+id/home_activity_auto_fandy_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dim_8dp"
+                    android:text="@string/auto_fandy"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/home_activity_auto_fandy_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="144dp"
+                    android:layout_marginTop="@dimen/dim_8dp"
+                    app:srcCompat="@drawable/autofandy" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Button" />
+
+                <TextView
+                    android:id="@+id/home_activity_yahia_adwan_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dim_8dp"
+                    android:text="Yahia Radwan"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/home_activity_yahia_adwan_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="144dp"
+                    android:layout_marginTop="@dimen/dim_8dp"
+                    app:srcCompat="@drawable/yahiaradwan" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Button" />
+
+                <TextView
+                    android:id="@+id/home_activity_arab_gt_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dim_8dp"
+                    android:text="@string/arab_gt"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/home_activity_arab_gt_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="144dp"
+                    android:layout_marginTop="@dimen/dim_8dp"
+                    app:srcCompat="@drawable/arabgt" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Button" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</layout>
