@@ -1,4 +1,4 @@
-package Adapter;
+package com.example.youtubeplaynativevideo.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,48 +12,47 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.youtubeplaynativevideo.Pojo.YoutubeVedio;
 import com.example.youtubeplaynativevideo.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class VedioAdapter extends RecyclerView.Adapter<VedioAdapter.VedioViewHolder> {
-    List<YoutubeVedio> youtubeVedioList;
+    private List<YoutubeVedio> youtubeVideoList;
 
     public VedioAdapter() {
+        youtubeVideoList = new ArrayList<>();
+    }
+
+    public void setYoutubeVideoList(List<YoutubeVedio> youtubeVideoList) {
+        this.youtubeVideoList = youtubeVideoList;
+        notifyDataSetChanged();
     }
 
     @NonNull
     @Override
     public VedioViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_vedio,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_vedio, parent, false);
         return new VedioViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull VedioViewHolder holder, int position) {
-        holder.vedioWeb.loadData(youtubeVedioList.get(position).getVedioUrl(),"text/html","utf-8");
+        holder.vedioWeb.loadData(youtubeVideoList.get(position).getVedioUrl(), "text/html", "utf-8");
     }
-
-    public VedioAdapter(List<YoutubeVedio> youtubeVedioList) {
-        this.youtubeVedioList = youtubeVedioList;
-    }
-
-
 
     @Override
     public int getItemCount() {
-        return youtubeVedioList.size();
+        return youtubeVideoList.size();
     }
 
-    public class VedioViewHolder extends RecyclerView.ViewHolder{
+    public static class VedioViewHolder extends RecyclerView.ViewHolder {
         WebView vedioWeb;
+
         public VedioViewHolder(@NonNull View itemView) {
             super(itemView);
-            vedioWeb =itemView.findViewById(R.id.web_vedio_view);
+            vedioWeb = itemView.findViewById(R.id.web_vedio_view);
             vedioWeb.getSettings().setJavaScriptEnabled(true);
-            vedioWeb.setWebChromeClient(new WebChromeClient(){
-
-
+            vedioWeb.setWebChromeClient(new WebChromeClient() {
             });
-
         }
     }
 }
